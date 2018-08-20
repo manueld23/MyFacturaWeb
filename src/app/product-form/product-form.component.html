@@ -1,0 +1,361 @@
+<div class="container"> 
+
+    <nav class="navbar navbar-light" style="background-color: #e3f2fd;">
+      <a href="#" class="navbar-brand">Panel principal</a>
+       <ul class="nav navbar-nav">
+         <li class="nav-item active"><a href="app/empleado/empleado.component.html" class="nav-link">Registro de CFDI 3.3</a></li>
+         <li class="nav-item active"><a href="#" class="nav-link">Generar CFDI 3.3</a></li>
+         <li class="nav-item active"><a href="#" class="nav-link">Mas</a></li>
+         <li class="nav-item active"><a href="#" class="nav-link">Ayuda</a></li>
+         <li class="nav-item active"><a href="#" class="nav-link">Cerrar sesion</a></li>
+       </ul>
+    </nav>
+  
+  <div class="panel panel-primary">
+   <div class="panel-heading">Buscar productos</div>
+    <div class="panel-body">
+      No. identificacion: <input type="text" name="identificacion" placeholder="No. identificacion">
+      Descripcion: <input type="text" name="descripcion" placeholder="Descripcion">
+
+      <button class="btn right" style="margin-left: 4px;">Limpiar</button>
+      <button type="button" class="btn btn-success">Buscar Producto</button>
+    </div>
+  </div>
+
+ <div class="panel panel-primary">
+  <div class="panel-heading">Productos</div>
+  <div class="panel-body">
+    <button type="button" class="btn btn-success" data-toggle="modal" data-target=".newProduct">Nuevo producto</button> <p>
+      <div class="modal fade newProduct" tabindex="-1" role="dialog" aria-labelledby="newProductLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <h5 class="modal-title" id="newProductLabel">Nuevo producto</h5>
+              </div>
+              <div class="form-horizontal">
+                  <div class="col-sm-6">
+                      <div class="form-group">
+                          <label for="MainContent_text_reg_nombre" class="col-sm-4 control-label">*Descripcion de producto o</label>
+                          <div class="col-sm-8">
+                              <input name="dProducto" id="dProducto" class="form-control" type="text" placeholder="Buscar producto o servicio">
+                          </div>
+                      </div>
+                      <div class="form-group">
+                          <label for="MainContent_text_reg_telefono" class="col-sm-4 control-label">Servicio:</label>
+                          <div class="col-sm-8">
+                              <textarea name="servicio" id="servicio" class="form-control" type="text" placeholder="Descripcion sobre la clave del producto"></textarea>
+                          </div>
+                      </div>
+                      <div class="form-group">
+                          <label for="MainContent_text_reg_email" class="col-sm-4 control-label">*Descripcion:</label>
+                          <div class="col-sm-8">
+                              <textarea name="descripcion" id="descripcion" class="form-control" type="text" placeholder="Descripcion"></textarea>
+                          </div>
+                      </div>
+                      <div class="form-group">
+                          <label for="MainContent_text_reg_web" class="col-sm-4 control-label">*No. identificacion:</label>
+                          <div class="col-sm-8">
+                              <input name="nIdentificacion" id="nIdentificacion" class="form-control" type="text" placeholder="No. identificacion">
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col-sm-6">
+                      <div class="form-group">
+                          <label for="MainContent_text_reg_direccion" class="col-sm-4 control-label">Descripcion unidad:</label>
+                          <div class="col-sm-8">
+                              <input name="dUnidad" id="dUnidad" class="form-control" type="text" placeholder="Buscar unidad">
+                          </div>
+                      </div>
+                      <div class="form-group">
+                          <label for="MainContent_text_reg_localidad" class="col-sm-4 control-label"></label>
+                          <div class="col-sm-8">
+                              <textarea name="dcUnidad" id="dcUnidad" class="form-control" type="text" placeholder="Descripcion sobre la clave de la unidad"></textarea>
+                          </div>
+                      </div>
+                      <div class="form-group">
+                          <label for="MainContent_text_reg_provincia" class="col-sm-4 control-label">*Valor unitario:</label>
+                          <div class="col-sm-8">
+                              <input name="vUnitario" id="vUnitario" class="form-control" type="text" placeholder="0.00">
+                          </div>
+                      </div>
+                      <div class="form-group">
+                          <label for="MainContent_text_reg_cp" class="col-sm-4 control-label">Unidad</label>
+                          <div class="col-sm-8">
+                              <input name="unidad" id="unidad" class="form-control" type="text" placeholder="Unidad">
+                          </div>
+                      </div>
+                  </div>
+            <div class="modal-footer">
+                <button type="button" class="btn right">Limpiar</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                <button type="button" class="btn btn-success">Agregar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+
+     <div class="table">
+       <table id="tabla1" border="1" class="table table-resposive">
+         <thead class="thead-dark">
+           <tr>
+             <th scope="col">Clave, servicio o prod</th>
+             <th scope="col">No. identificacion</th>
+             <th scope="col">Clave unidad</th>
+             <th scope="col">Unidad</th>
+             <th scope="col">Descripcion</th>
+             <th scope="col">Valor unitario</th>
+           </tr>
+         </thead>
+         <tbody>
+           <tr>
+             <th scope="row">1</th>
+             <td>Jacob</td>
+             <td>Tomas</td>
+             <td>@fat</td>
+             <td>soldadura</td>
+             <td>6000</td>
+           </tr>
+         </tbody>
+       </table>
+     </div>
+</div>
+</div>
+
+<div class="panel panel-primary">
+    <div class="panel-heading">Empleado</div>
+    <div class="panel-body"> 
+        <input type="checkbox" value=""><label>Agregar emisor</label>
+    <div class="form-horizontal">
+      <div class="col-sm-4">
+          <div class="form-group">
+              <label for="MainContent_text_reg_web" class="col-sm-4 control-label">CURP:</label>
+              <div class="col-sm-8">
+                  <input name="curp" id="curp" class="form-control" type="text" placeholder="AAAA010203MPLBCD11">
+              </div>
+              <div class="col-sm-8">
+                 <input type="checkbox" class="form-check-input"><h6>Agregar Entidad Sistema Nacional de Coordinacion Fiscal (SNCF)</h6>
+              </div>
+          </div>
+      </div>
+      <div class="col-sm-4">
+          <div class="form-group">
+              <h6 for="MainContent_text_reg_cp" class="col-sm-4 control-label">Registro patronal</h6>
+              <div class="col-sm-8">
+                  <input name="rPatronal" id="rPatronal" class="form-control" type="text" placeholder="Registro patronal">
+              </div>
+          </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="form-group">
+            <h6 for="MainContent_text_reg_cp" class="col-sm-4 control-label">RFC patron de origen</h6>
+            <div class="col-sm-8">
+                <input name="rpOrigen" id="rpOrigen" class="form-control" type="text" placeholder="AAAA010203AAA">
+            </div>
+        </div>
+      </div>
+    </div>
+   </div>
+  </div>
+
+
+
+
+  <div class="panel panel-primary">
+        <div class="panel-heading">Empleado</div>
+        <div class="panel-body"> 
+            <input type="checkbox" value=""><label>Activo</label> <p></p>
+            <input type="checkbox" value=""><label>Llenar domicilio del empleado</label>
+        <div class="form-horizontal">
+          <div class="col-sm-4">
+              <div class="form-group">
+                  <label for="MainContent_text_reg_web" class="col-sm-4 control-label">*RFC empleado:</label><p></p>
+                  <div class="col-sm-8">
+                      <input name="rfcEmpleado" id="rfcEmpleado" class="form-control" type="text" placeholder="AAAA010203AAA"><p></p>
+                  </div>
+              </div>
+              <div class="form-group">
+                  <label for="MainContent_text_reg_web" class="col-sm-4 control-label">*No. empleado:</label>
+                    <div class="col-sm-8">
+                        <input name="nEmpleado" id="nEmpleado" class="form-control" type="text" placeholder="Numero del empleado">
+                    </div>
+              </div>
+              <div class="form-group">
+                    <label for="MainContent_text_reg_web" class="col-sm-4 control-label">*Periodicidad del pago:</label>
+                    <div class="col-sm-8">
+                        <select class="selectpicker">
+                           <option value="" disabled selected>Sin eleccion</option>
+                           <option>AAAA</option>
+                           <option>EEEE</option>
+                        </select>
+                    </div>
+              </div>
+              <div class="form-group">
+                    <label for="MainContent_text_reg_web" class="col-sm-4 control-label">*Tipo de regimen:</label>
+                    <div class="col-sm-8">
+                        <select class="mdb-select">
+                           <option value="" disabled selected>Sin eleccion</option>
+                           <option>AAAA</option>
+                           <option>EEEE</option>
+                        </select>
+                    </div>
+              </div>
+              <div class="form-group">
+                    <label for="MainContent_text_reg_web" class="col-sm-4 control-label">*Riesgo del puesto:</label>
+                    <div class="col-sm-8">
+                        <select class="mdb-select">
+                           <option value="" disabled selected>Sin eleccion</option>
+                           <option>AAAA</option>
+                           <option>EEEE</option>
+                        </select>
+                    </div>
+              </div>
+              <div class="form-group">
+                    <label for="MainContent_text_reg_web" class="col-sm-4 control-label">*Departamento:</label><p></p>
+                    <div class="col-sm-8">
+                        <input name="departamento" id="departamento" class="form-control" type="text" placeholder="Departamento empleado"><p></p>
+                    </div>
+              </div>
+              <div class="form-group">
+                    <label for="MainContent_text_reg_web" class="col-sm-4 control-label">*Cuenta bancaria:</label><p></p>
+                    <div class="col-sm-8">
+                        <input name="cBancaria" id="cBancaria" class="form-control" type="text" placeholder="123456789012345678"><p></p>
+                    </div>
+              </div>
+          </div>
+          <div class="col-sm-4">
+              <div class="form-group">
+                  <h6 for="MainContent_text_reg_cp" class="col-sm-4 control-label">*Nombre empleado:</h6>
+                  <div class="col-sm-8">
+                      <input name="nomEmpleado" id="nomEmpleado" class="form-control" type="text" placeholder="Nombre empleado">
+                  </div>
+              </div>
+              <div class="form-group">
+                    <h6 for="MainContent_text_reg_cp" class="col-sm-4 control-label">*CURP:</h6>
+                    <div class="col-sm-8">
+                        <input name="curp2" id="curp2" class="form-control" type="text" placeholder="AAAA010203MPLBCD11">
+                    </div>
+              </div>
+              <div class="form-group">
+                    <h6 for="MainContent_text_reg_cp" class="col-sm-4 control-label">*Entidad federativa:</h6>
+                    <div class="col-sm-8">
+                        <select class="mdb-select">
+                            <option value="" disabled selected>Sin eleccion</option>
+                            <option>AAAA</option>
+                            <option>EEEE</option>
+                        </select>
+                    </div>
+              </div>
+              <div class="form-group">
+                    <h6 for="MainContent_text_reg_cp" class="col-sm-4 control-label">NSS:</h6>
+                    <div class="col-sm-8">
+                        <input name="nss" id="nss" class="form-control" type="text" placeholder="Numero de seguro social">
+                    </div>
+              </div>
+              <div class="form-group">
+                    <h6 for="MainContent_text_reg_cp" class="col-sm-4 control-label">Salario diario integrado:</h6>
+                    <div class="col-sm-8">
+                        <input name="sdIntegrado" id="sdIntegrado" class="form-control" type="text" placeholder="0.00">
+                    </div>
+              </div>
+              <div class="form-group">
+                    <h6 for="MainContent_text_reg_cp" class="col-sm-4 control-label">Puesto:</h6>
+                    <div class="col-sm-8">
+                        <input name="puesto" id="puesto" class="form-control" type="text" placeholder="Puesto empleado">
+                    </div>
+              </div>
+              <div class="form-group">
+                    <h6 for="MainContent_text_reg_cp" class="col-sm-4 control-label">Banco:</h6>
+                    <div class="col-sm-8">
+                        <select class="mdb-select">
+                            <option value="" disabled selected>Sin eleccion</option>
+                            <option>AAAA</option>
+                            <option>EEEE</option>
+                        </select>
+                    </div>
+              </div>
+          </div>
+          <div class="col-sm-4">
+            <div class="form-group">
+                <h6 for="MainContent_text_reg_cp" class="col-sm-4 control-label">E-Mail</h6>
+                <div class="col-sm-8">
+                    <input name="eMail" id="eMail" class="form-control" type="text" placeholder="ejemplo@sucorreo.com">
+                </div>
+            </div>
+            <div class="form-group">
+                    <h6 for="MainContent_text_reg_cp" class="col-sm-4 control-label">Tipo de nómina:</h6>
+                    <div class="col-sm-8">
+                        <select class="mdb-select">
+                            <option value="" disabled selected>Sin eleccion</option>
+                            <option>AAAA</option>
+                            <option>EEEE</option>
+                        </select>
+                    </div>
+            </div>
+            <div class="form-group">
+                    <h6 for="MainContent_text_reg_cp" class="col-sm-4 control-label">Tipo de contrato:</h6>
+                    <div class="col-sm-8">
+                        <select class="mdb-select">
+                            <option value="" disabled selected>Sin eleccion</option>
+                            <option>AAAA</option>
+                            <option>EEEE</option>
+                        </select>
+                    </div>
+            </div>
+            <div class="form-group">
+                    <h6 for="MainContent_text_reg_cp" class="col-sm-4 control-label">Salario base, cuotas y aportaciones:</h6>
+                    <div class="col-sm-8">
+                        <input name="sbcAportaciones" id="sbcAportaciones" class="form-control" type="text" placeholder="0.00">
+                    </div>
+            </div>
+            <div class="form-group">
+                    <h6 for="MainContent_text_reg_cp" class="col-sm-4 control-label">Tipo de jornada:</h6>
+                    <div class="col-sm-8">
+                        <select class="mdb-select">
+                            <option value="" disabled selected>Sin eleccion</option>
+                            <option>AAAA</option>
+                            <option>EEEE</option>
+                        </select>
+                    </div>
+            </div>
+            <div class="form-group">
+                    <h6 for="MainContent_text_reg_cp" class="col-sm-4 control-label">Sindicalizado:</h6>
+                    <div class="col-sm-8">
+                        <select class="mdb-select">
+                            <option value="" disabled selected>Sin eleccion</option>
+                            <option>AAAA</option>
+                            <option>EEEE</option>
+                        </select>
+                    </div>
+            </div>
+            <div class="form-group">
+                    <h6 for="MainContent_text_reg_cp" class="col-sm-4 control-label">Fecha de inicio relacion laboral:</h6>
+                    <div class="col-sm-8" style="height: 130px;">
+                        
+                          <div class="form-group">
+                            <div class="input-group date" id="datetimepicker11">
+                              <input type="text" class="form-control">
+                                <span class="input-group-addon">
+                                    <span class="glyphicon glyphicon-calendar"></span>
+                                </span>
+                            </div>
+                          </div>
+                           
+                        
+                    </div>
+            </div>
+          </div>
+        </div>
+       </div>
+      </div>
+
+      <script>
+        $(function() {
+            $('#datetimepicker11').datetimepicker({
+                daysOfWeekDisabled: [0, 6]
+            });
+        });
+      </script>
+
+
+</div>
