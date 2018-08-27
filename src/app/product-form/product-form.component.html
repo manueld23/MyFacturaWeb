@@ -1,15 +1,32 @@
 <div class="container"> 
 
-    <nav class="navbar navbar-light" style="background-color: #e3f2fd;">
-      <a href="#" class="navbar-brand">Panel principal</a>
-       <ul class="nav navbar-nav">
-         <li class="nav-item active"><a href="app/empleado/empleado.component.html" class="nav-link">Registro de CFDI 3.3</a></li>
-         <li class="nav-item active"><a href="#" class="nav-link">Generar CFDI 3.3</a></li>
-         <li class="nav-item active"><a href="#" class="nav-link">Mas</a></li>
-         <li class="nav-item active"><a href="#" class="nav-link">Ayuda</a></li>
-         <li class="nav-item active"><a href="#" class="nav-link">Cerrar sesion</a></li>
-       </ul>
-    </nav>
+    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #e3f2fd;">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+              <a class="nav-link" href="#"><h4>Panel principal</h4><span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#"><h4>Registro de CFDI 3.3</h4></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#"><h4>Generar CFDI 3.3</h4></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#"><h4>MAS</h4></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#"><h4>Ayuda</h4></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#"><h4>Cerrar sesión</h4></a>
+            </li>
+          </ul>
+        </div>
+      </nav>
   
   <div class="panel panel-primary">
    <div class="panel-heading">Buscar productos</div>
@@ -105,16 +122,22 @@
              <th scope="col">Unidad</th>
              <th scope="col">Descripcion</th>
              <th scope="col">Valor unitario</th>
+             <th scope="col">Tiempo</th>
+             <th scope="col">Editar</th>
+             <th scope="col">Eliminar</th>
            </tr>
          </thead>
          <tbody>
            <tr>
-             <th scope="row">1</th>
-             <td>Jacob</td>
-             <td>Tomas</td>
-             <td>@fat</td>
-             <td>soldadura</td>
-             <td>6000</td>
+             <td scope="row">11101716</td>
+             <td>1.00</td>
+             <td>MTR</td>
+             <td>METRO</td>
+             <td>SOLDADURA OMEGA 1.00</td>
+             <td>$6.00000</td>
+             <td><i class="far fa-clock" style="font-size: 15px;"></i></td>
+             <td><i class="fas fa-pencil-alt" style="font-size: 15px;"></i></td>
+             <td><i class="fas fa-trash-alt" style="font-size: 15px;"></i></td>
            </tr>
          </tbody>
        </table>
@@ -122,240 +145,518 @@
 </div>
 </div>
 
-<div class="panel panel-primary">
-    <div class="panel-heading">Empleado</div>
-    <div class="panel-body"> 
-        <input type="checkbox" value=""><label>Agregar emisor</label>
-    <div class="form-horizontal">
-      <div class="col-sm-4">
-          <div class="form-group">
-              <label for="MainContent_text_reg_web" class="col-sm-4 control-label">CURP:</label>
-              <div class="col-sm-8">
-                  <input name="curp" id="curp" class="form-control" type="text" placeholder="AAAA010203MPLBCD11">
-              </div>
-              <div class="col-sm-8">
-                 <input type="checkbox" class="form-check-input"><h6>Agregar Entidad Sistema Nacional de Coordinacion Fiscal (SNCF)</h6>
-              </div>
-          </div>
-      </div>
-      <div class="col-sm-4">
-          <div class="form-group">
-              <h6 for="MainContent_text_reg_cp" class="col-sm-4 control-label">Registro patronal</h6>
-              <div class="col-sm-8">
-                  <input name="rPatronal" id="rPatronal" class="form-control" type="text" placeholder="Registro patronal">
-              </div>
-          </div>
-      </div>
-      <div class="col-sm-4">
-        <div class="form-group">
-            <h6 for="MainContent_text_reg_cp" class="col-sm-4 control-label">RFC patron de origen</h6>
-            <div class="col-sm-8">
-                <input name="rpOrigen" id="rpOrigen" class="form-control" type="text" placeholder="AAAA010203AAA">
-            </div>
-        </div>
-      </div>
-    </div>
-   </div>
-  </div>
 
-
-
-
-  <div class="panel panel-primary">
+<style>
+        .b {border: thin blue solid;}
+</style>
+    
+    <div class="panel panel-primary">
         <div class="panel-heading">Empleado</div>
         <div class="panel-body"> 
-            <input type="checkbox" value=""><label>Activo</label> <p></p>
-            <input type="checkbox" value=""><label>Llenar domicilio del empleado</label>
-        <div class="form-horizontal">
-          <div class="col-sm-4">
-              <div class="form-group">
-                  <label for="MainContent_text_reg_web" class="col-sm-4 control-label">*RFC empleado:</label><p></p>
-                  <div class="col-sm-8">
-                      <input name="rfcEmpleado" id="rfcEmpleado" class="form-control" type="text" placeholder="AAAA010203AAA"><p></p>
-                  </div>
-              </div>
-              <div class="form-group">
-                  <label for="MainContent_text_reg_web" class="col-sm-4 control-label">*No. empleado:</label>
-                    <div class="col-sm-8">
-                        <input name="nEmpleado" id="nEmpleado" class="form-control" type="text" placeholder="Numero del empleado">
-                    </div>
-              </div>
-              <div class="form-group">
-                    <label for="MainContent_text_reg_web" class="col-sm-4 control-label">*Periodicidad del pago:</label>
-                    <div class="col-sm-8">
-                        <select class="selectpicker">
-                           <option value="" disabled selected>Sin eleccion</option>
-                           <option>AAAA</option>
-                           <option>EEEE</option>
-                        </select>
-                    </div>
-              </div>
-              <div class="form-group">
-                    <label for="MainContent_text_reg_web" class="col-sm-4 control-label">*Tipo de regimen:</label>
-                    <div class="col-sm-8">
-                        <select class="mdb-select">
-                           <option value="" disabled selected>Sin eleccion</option>
-                           <option>AAAA</option>
-                           <option>EEEE</option>
-                        </select>
-                    </div>
-              </div>
-              <div class="form-group">
-                    <label for="MainContent_text_reg_web" class="col-sm-4 control-label">*Riesgo del puesto:</label>
-                    <div class="col-sm-8">
-                        <select class="mdb-select">
-                           <option value="" disabled selected>Sin eleccion</option>
-                           <option>AAAA</option>
-                           <option>EEEE</option>
-                        </select>
-                    </div>
-              </div>
-              <div class="form-group">
-                    <label for="MainContent_text_reg_web" class="col-sm-4 control-label">*Departamento:</label><p></p>
-                    <div class="col-sm-8">
-                        <input name="departamento" id="departamento" class="form-control" type="text" placeholder="Departamento empleado"><p></p>
-                    </div>
-              </div>
-              <div class="form-group">
-                    <label for="MainContent_text_reg_web" class="col-sm-4 control-label">*Cuenta bancaria:</label><p></p>
-                    <div class="col-sm-8">
-                        <input name="cBancaria" id="cBancaria" class="form-control" type="text" placeholder="123456789012345678"><p></p>
-                    </div>
-              </div>
-          </div>
-          <div class="col-sm-4">
-              <div class="form-group">
-                  <h6 for="MainContent_text_reg_cp" class="col-sm-4 control-label">*Nombre empleado:</h6>
-                  <div class="col-sm-8">
-                      <input name="nomEmpleado" id="nomEmpleado" class="form-control" type="text" placeholder="Nombre empleado">
-                  </div>
-              </div>
-              <div class="form-group">
-                    <h6 for="MainContent_text_reg_cp" class="col-sm-4 control-label">*CURP:</h6>
-                    <div class="col-sm-8">
-                        <input name="curp2" id="curp2" class="form-control" type="text" placeholder="AAAA010203MPLBCD11">
-                    </div>
-              </div>
-              <div class="form-group">
-                    <h6 for="MainContent_text_reg_cp" class="col-sm-4 control-label">*Entidad federativa:</h6>
-                    <div class="col-sm-8">
-                        <select class="mdb-select">
-                            <option value="" disabled selected>Sin eleccion</option>
-                            <option>AAAA</option>
-                            <option>EEEE</option>
-                        </select>
-                    </div>
-              </div>
-              <div class="form-group">
-                    <h6 for="MainContent_text_reg_cp" class="col-sm-4 control-label">NSS:</h6>
-                    <div class="col-sm-8">
-                        <input name="nss" id="nss" class="form-control" type="text" placeholder="Numero de seguro social">
-                    </div>
-              </div>
-              <div class="form-group">
-                    <h6 for="MainContent_text_reg_cp" class="col-sm-4 control-label">Salario diario integrado:</h6>
-                    <div class="col-sm-8">
-                        <input name="sdIntegrado" id="sdIntegrado" class="form-control" type="text" placeholder="0.00">
-                    </div>
-              </div>
-              <div class="form-group">
-                    <h6 for="MainContent_text_reg_cp" class="col-sm-4 control-label">Puesto:</h6>
-                    <div class="col-sm-8">
-                        <input name="puesto" id="puesto" class="form-control" type="text" placeholder="Puesto empleado">
-                    </div>
-              </div>
-              <div class="form-group">
-                    <h6 for="MainContent_text_reg_cp" class="col-sm-4 control-label">Banco:</h6>
-                    <div class="col-sm-8">
-                        <select class="mdb-select">
-                            <option value="" disabled selected>Sin eleccion</option>
-                            <option>AAAA</option>
-                            <option>EEEE</option>
-                        </select>
-                    </div>
-              </div>
-          </div>
-          <div class="col-sm-4">
-            <div class="form-group">
-                <h6 for="MainContent_text_reg_cp" class="col-sm-4 control-label">E-Mail</h6>
-                <div class="col-sm-8">
-                    <input name="eMail" id="eMail" class="form-control" type="text" placeholder="ejemplo@sucorreo.com">
+           <div>
+                <input type="checkbox" value=""><label>Agregar emisor</label>
+           </div>
+        <div class="d-flex justify-content-center">
+            <div class="b"><p>
+
+             <form class="form-inline" role="form">
+               <div class="form-group col-lg-4">
+                  <h6>CURP:</h6>
+                  <input type="text" class="form-control" id="rfc3" placeholder="AAAA010203MPLBCD11"> 
+               </div>
+               <div class="form-group col-lg-4">
+                  <h6>Registro patrona:</h6>
+                  <input type="text" class="form-control" id="rPatronal" placeholder="Registro patronal">
+               </div>
+               <div class="form-group col-lg-4">
+                  <h6>RFC patron de origen:</h6>
+                  <input type="text" class="form-control" id="rfcPatronOrigen" placeholder="AAAA010203AAA">
+               </div>
+               <div class="col-lg-4 form-group">
+                  <input type="checkbox" class="form-control">
+                  <h6>Agregar Entidad Sistema Nacional de Coordinacion Fiscal(SNFC)</h6>
+               </div>
+             </form>
+
+              
                 </div>
-            </div>
-            <div class="form-group">
-                    <h6 for="MainContent_text_reg_cp" class="col-sm-4 control-label">Tipo de nómina:</h6>
-                    <div class="col-sm-8">
-                        <select class="mdb-select">
-                            <option value="" disabled selected>Sin eleccion</option>
-                            <option>AAAA</option>
-                            <option>EEEE</option>
-                        </select>
-                    </div>
-            </div>
-            <div class="form-group">
-                    <h6 for="MainContent_text_reg_cp" class="col-sm-4 control-label">Tipo de contrato:</h6>
-                    <div class="col-sm-8">
-                        <select class="mdb-select">
-                            <option value="" disabled selected>Sin eleccion</option>
-                            <option>AAAA</option>
-                            <option>EEEE</option>
-                        </select>
-                    </div>
-            </div>
-            <div class="form-group">
-                    <h6 for="MainContent_text_reg_cp" class="col-sm-4 control-label">Salario base, cuotas y aportaciones:</h6>
-                    <div class="col-sm-8">
-                        <input name="sbcAportaciones" id="sbcAportaciones" class="form-control" type="text" placeholder="0.00">
-                    </div>
-            </div>
-            <div class="form-group">
-                    <h6 for="MainContent_text_reg_cp" class="col-sm-4 control-label">Tipo de jornada:</h6>
-                    <div class="col-sm-8">
-                        <select class="mdb-select">
-                            <option value="" disabled selected>Sin eleccion</option>
-                            <option>AAAA</option>
-                            <option>EEEE</option>
-                        </select>
-                    </div>
-            </div>
-            <div class="form-group">
-                    <h6 for="MainContent_text_reg_cp" class="col-sm-4 control-label">Sindicalizado:</h6>
-                    <div class="col-sm-8">
-                        <select class="mdb-select">
-                            <option value="" disabled selected>Sin eleccion</option>
-                            <option>AAAA</option>
-                            <option>EEEE</option>
-                        </select>
-                    </div>
-            </div>
-            <div class="form-group">
-                    <h6 for="MainContent_text_reg_cp" class="col-sm-4 control-label">Fecha de inicio relacion laboral:</h6>
-                    <div class="col-sm-8" style="height: 130px;">
-                        
-                          <div class="form-group">
-                            <div class="input-group date" id="datetimepicker11">
-                              <input type="text" class="form-control">
-                                <span class="input-group-addon">
-                                    <span class="glyphicon glyphicon-calendar"></span>
-                                </span>
-                            </div>
-                          </div>
-                           
-                        
-                    </div>
+    
             </div>
           </div>
-        </div>
        </div>
-      </div>
-
-      <script>
-        $(function() {
-            $('#datetimepicker11').datetimepicker({
-                daysOfWeekDisabled: [0, 6]
-            });
-        });
-      </script>
+      
+    
+<style>
+    .c { border: thin blue solid;}
+</style>    
 
 
+<div class="panel panel-primary">
+  <div class="panel-heading">Empleado</div>
+     <div id="c"class="panel-body d-flex justify-content-center">
+        <!--<div class="d-flex justify-content-center "> -->
+        <div class="c"> <p></p>
+            <form class="form-inline col-lg-12 " role="form-horizontal">
+                <div class="col-md-12 col-lg-12">
+                  <div class="row">
+                     <div class="col-lg-4 form-group">       
+                         <div class="col-lg-5">
+                                     
+                         </div>
+                         <div class="col-lg-7 form-group">
+                             <input type="checkbox" class="form-control" id="activo">
+                             <font size="2"> Activo</font> 
+                         </div>                    
+                     </div>
+                     <div class="col-lg-4 form-group">   
+                         <div class="col-lg-5">
+                                                
+                         </div>
+                         <div class="col-lg-7">
+                                             
+                         </div>    
+                     </div>
+                     <div class="col-lg-4 form-group">           
+                         <div class="col-lg-5">
+                                               
+                         </div>
+                         <div class="col-lg-7">
+                                             
+                         </div>   
+                     </div>
+                  </div>  
+                  <div class="row">
+                     <div class="col-lg-4 form-group">       
+                         <div class="col-lg-5">
+                             
+                         </div>
+                         <div class="col-lg-7 form-group">
+                             <input type="checkbox" class="form-control" id="domEmpleado">
+                             <font size="2">Llenar domicilio del empleado</font> 
+                         </div>                    
+                     </div>
+                     <div class="col-lg-4 form-group">   
+                         <div class="col-lg-5">
+                                        
+                         </div>
+                         <div class="col-lg-7">
+                                     
+                         </div>    
+                     </div>
+                     <div class="col-lg-4 form-group">           
+                         <div class="col-lg-5">
+                                       
+                         </div>
+                         <div class="col-lg-7">
+                                     
+                         </div>   
+                     </div>
+                  </div>
+                  <div class="row">
+                     <div class="col-lg-4 form-group">       
+                         <div class="col-lg-5">
+                             <font size="2" class="r">*RFC empleado</font>
+                         </div>
+                         <div class="col-lg-7">
+                             <input type="text" class="form-control" id="rfcEmpleado" placeholder="AAAA010203AAA" maxlength="13">
+                         </div>                    
+                     </div>
+                     <div class="col-lg-4 form-group">   
+                         <div class="col-lg-5">
+                             <font size="2" class="r">*Nombre empleado:</font>    
+                         </div>
+                         <div class="col-lg-7">
+                             <input type="text" class="form-control" id="nEmpleado" placeholder="Nombre empleado">
+                         </div>    
+                     </div>
+                     <div class="col-lg-4 form-group">           
+                         <div class="col-lg-5">
+                             <font size="1">E-Mail:</font>    
+                         </div>
+                         <div class="col-lg-7">
+                             <input type="text" class="form-control" id="email" placeholder="ejemplo@sucorreo.com">
+                         </div>   
+                     </div>
+                  </div>
+                  <div class="row">
+                     <div class="col-lg-4 form-group">
+                         <div class="col-lg-5">
+                             <font size="2" class="r">*No. empleado:</font>
+                         </div>
+                         <div class="col-lg-7">
+                             <input type="text" class="form-control" id="noEmpleado" placeholder="Número del empleado">
+                         </div>    
+                     </div>
+                     <div class="col-lg-4 form-group">
+                         <div class="col-lg-5">
+                             <font size="2" class="r">*CURP</font>:   
+                         </div>
+                         <div class="col-lg-7">
+                             <input type="text" class="form-control" id="curp" placeholder="AAAA010203MPLBCD11">
+                         </div>     
+                     </div>
+                     <div class="col-lg-4 form-group">
+                         <div class="col-lg-5">
+                             <font size="2" class="r">*Tipo de nómina:</font>   
+                         </div>
+                         <div class="col-lg-7">
+                             <select id="tNomina" class="custom-select form-control">
+                                 <option value="" disabled selected>Sin Selección</option>
+                                 <option>AAA</option>
+                                 <option>EEE</option>
+                                 </select>
+                         </div>  
+                     </div>
+                  </div>
+                  <div class="row">
+                     <div class="col-lg-4 form-group">
+                         <div class="col-lg-5">
+                             <font size="2" class="r">*Periodicidad del pago:</font>
+                         </div>
+                         <div class="col-lg-7">
+                             <select id="pPago" class="custom-select form-control">
+                                 <option value="" disabled selected>Sin Selección</option>
+                                 <option>AAA</option>
+                                 <option>EEE</option>
+                             </select>
+                         </div>
+                     </div>
+                     <div class="col-lg-4 form-group">
+                         <div class="col-lg-5">
+                             <font size="2" class="r">*Entidad federativa:</font>   
+                         </div>
+                         <div class="col-lg-7">
+                             <select id="eFederativa" class="custom-select form-control">
+                                 <option value="" disabled selected>Sin Selección</option>
+                                 <option>AAA</option>
+                                 <option>EEE</option>
+                             </select>
+                         </div>
+                     </div>
+                     <div class="col-lg-4 form-group">
+                         <div class="col-lg-5">
+                             <font size="2" class="r">*Tipo de contrato:</font>   
+                         </div>
+                         <div class="col-lg-7">
+                             <select id="tContrato" class="custom-select form-control">
+                                 <option value="" disabled selected>Sin Selección</option>
+                                 <option>AAA</option>
+                                 <option>EEE</option>
+                             </select> 
+                         </div>
+                     </div>
+                  </div>
+                  <div class="row">
+                     <div class="col-lg-4 form-group">
+                         <div class="col-lg-5">
+                             <font size="2" class="r">*Tipo de régimen:</font>
+                         </div>
+                         <div class="col-lg-7">
+                             <select tRegimen class="custom-select form-control">
+                                 <option value="" disabled selected>Sin Selección</option>
+                                 <option>AAA</option>
+                                 <option>EEE</option>
+                             </select>
+                         </div>
+                     </div>
+                     <div class="col-lg-4 form-group">
+                         <div class="col-lg-5">
+                             <font size="1">NSS:</font>   
+                         </div>
+                         <div class="col-lg-7">
+                             <input type="text" class="form-control" id="nss" placeholder="Número de seguro social">
+                         </div>
+                     </div>
+                     <div class="col-lg-4 form-group">
+                         <div class="col-lg-5">
+                             <font size="1">Salario base, cuotas y aportaciones:</font>   
+                         </div>
+                         <div class="col-lg-7">
+                            <input type="text" class="form-control" id="sbcAporta" placeholder="0.00">
+                         </div>                   
+                     </div>            
+                  </div>
+                  <div class="row">
+                     <div class="col-lg-4 form-group">
+                         <div class="col-lg-5">
+                             <font size="1">Riesgo del puesto:</font>
+                         </div>
+                         <div class="col-lg-7">
+                             <select id="rPuesto" class="custom-select form-control">
+                                 <option value="" disabled selected>Sin Selección</option>
+                                 <option>AAA</option>
+                                 <option>EEE</option>
+                             </select>
+                         </div>
+                     </div>
+                     <div class="col-lg-4 form-group">
+                         <div class="col-lg-5">
+                             <font size="1">*Salario diario integrado:</font>  
+                         </div>
+                         <div class="col-lg-7">
+                             <input type="text" class="form-control" id="sdIntegrado" placeholder="0.00">
+                         </div>
+                     </div>
+                     <div class="col-lg-4 form-group">
+                         <div class="col-lg-5">
+                             <font size="1">Tipo de jornada:</font>   
+                         </div>
+                         <div class="col-lg-7">
+                             <select id="tJornada" class="custom-select form-control">
+                                 <option value="" disabled selected>Sin Selección</option>
+                                 <option>AAA</option>
+                                 <option>EEE</option>
+                             </select>
+                         </div>                   
+                     </div>            
+                  </div>
+                  <div class="row">
+                     <div class="col-lg-4 form-group">
+                         <div class="col-lg-5">
+                             <font size="1">Departamento:</font>
+                         </div>
+                         <div class="col-lg-7">
+                             <input type="text" class="form-control" id="departamento" placeholder="Departamento empleado">
+                         </div>
+                     </div>
+                     <div class="col-lg-4 form-group">
+                         <div class="col-lg-5">
+                             <font size="1">Puesto:</font>   
+                         </div>
+                         <div class="col-lg-7">
+                             <input type="text" class="form-control" id="puesto" placeholder="Puesto empleado">
+                         </div>
+                     </div>
+                     <div class="col-lg-4 form-group">
+                         <div class="col-lg-5">
+                             <font size="1">Sindicalizado:</font>   
+                         </div>
+                         <div class="col-lg-7">
+                             <select id="sindicalizado" class="custom-select form-control">
+                                 <option value="" disabled selected>Sin Seleccionar</option>
+                                 <option>AAA</option>
+                                 <option>EEE</option>
+                             </select>
+                         </div>                   
+                     </div>            
+                  </div>
+                  <div class="row">
+                     <div class="col-lg-4 form-group">
+                         <div class="col-lg-5">
+                             <font size="1">Cuenta bancaria:</font>
+                         </div>
+                         <div class="col-lg-7">
+                             <input type="text" class="form-control" id="cBancaria" placeholder="123456789012345678">
+                         </div>
+                     </div>
+                     <div class="col-lg-4 form-group">
+                         <div class="col-lg-5">
+                             <font size="1">Banco:</font>   
+                         </div>
+                         <div class="col-lg-7">
+                             <select id="banco" class="custom-select form-control">
+                                 <option value="" disabled selected>Sin Selección</option>
+                                 <option>AAA</option>
+                                 <option>EEE</option>
+                             </select> 
+                         </div>
+                     </div>
+                     <div class="col-lg-4 form-group">
+                         <div class="col-lg-5">
+                             <font size="1">Fecha inicio relación laboral:</font>   
+                         </div>
+                         <div class="col-lg-7">
+                             <input type="text" class="form-control" id="firLboral" placeholder="calendario">
+                         </div>                   
+                     </div>            
+                  </div>
+                </div>
+             </form> <br>
+        </div> 
+        
+     </div>
+
+     <form class="form-inline" role="form">
+        <div class="form-group col-lg-3">
+          <input type="checkbox" class="form-control" id="aSubcontratacion"><h6>Agregar subcontratacion</h6><br><br>
+        </div>
+        <div class="form-group col-lg-3">
+         
+        </div>
+        <div class="form-group col-lg-3">
+             
+        </div><br>
+        <div class="form-group col-lg-3">
+            
+        </div> 
+      </form>
+
+       <form class="form-inline" role="form">
+        <div class="form-group col-lg-3">
+          
+          <input type="checkbox" class="form-control" id="email"><h6> Agregar percepciones</h6>
+        </div>
+        <div class="form-group col-lg-3">
+          <input type="checkbox" class="form-control" id="pwd"><h6> Agregar deducciones:</h6>
+        </div>
+        <div class="form-group col-lg-3">
+            <input type="checkbox" class="form-control" id="pwd" placeholder="AAAA010203MPLBCD11"><h6> Agregar otros pagos</h6> 
+        </div><br>
+        <div class="form-group col-lg-3">
+            <input type="checkbox" class="form-control"><h6> Agregar incapacidades</h6>
+        </div> 
+      </form>
+
+</div>
+    
+    
+          <div class="panel panel-primary">
+                <div class="panel-heading">Empleado</div>
+                <div class="panel-body"> 
+                <div class="form-horizontal">
+                  <div class="col-sm-4">
+                      <div class="form-group">
+                          <label for="MainContent_text_reg_web" class="col-sm-4 control-label">Total de percepciones:</label>
+                          <div class="col-sm-8">
+                              <input name="tPercepciones" id="tPercepciones" class="form-control" type="text" placeholder="0.00">
+                          </div>
+                      </div>
+                      <div class="form-group">
+                            <label for="MainContent_text_reg_web" class="col-sm-4 control-label">Subtotal:</label>
+                            <div class="col-sm-8">
+                                <label for="MainContent_text_reg_web" class="col-sm-4 control-label">0.00</label><p></p>
+                            </div>
+                        </div>
+                  </div>
+                  <div class="col-sm-4">
+                      <div class="form-group">
+                          <h6 for="MainContent_text_reg_cp" class="col-sm-4 control-label">Total de deducciones</h6>
+                          <div class="col-sm-8">
+                              <input name="tDeducciones" id="tDeducciones" class="form-control" type="text" placeholder="0.00">
+                          </div>
+                      </div>
+                      <div class="form-group">
+                            <label for="MainContent_text_reg_web" class="col-sm-4 control-label">Descuento:</label>
+                            <div class="col-sm-8">
+                                <label for="MainContent_text_reg_web" class="col-sm-4 control-label">0.00</label><p></p>
+                            </div>
+                      </div>
+                  </div>
+                  <div class="col-sm-4">
+                    <div class="form-group">
+                        <h6 for="MainContent_text_reg_cp" class="col-sm-4 control-label">Total de otros de pagos</h6>
+                        <div class="col-sm-8">
+                            <input name="toPagos" id="toPagos" class="form-control" type="text" placeholder="0.00">
+                        </div>    
+                    </div>
+                    <div class="form-group">
+                            <label for="MainContent_text_reg_web" class="col-sm-4 control-label">Total:</label>
+                            <div class="col-sm-8">
+                                <label for="MainContent_text_reg_web" class="col-sm-4 control-label">0.00</label><p></p>
+                            </div>
+                    </div>
+                  </div>
+                </div>
+               </div>
+              </div>
+    
+    
+             <div class="panel panel-primary">
+                    <div class="panel-heading"></div>
+                     <div class="panel-body">
+                 
+                       <button type="button" class="btn btn-secondary" style="margin-left: 4px;">Regresar</button>
+                       <button type="button" class="btn btn-secondary">Limpiar</button>
+                       <button type="button" class="btn btn-success">Agregar</button>
+                     </div>
+               </div>
+
+
+               <div class="panel panel-primary">
+                    <div class="panel-heading">Filtrado de empleados 1.2</div>
+                    <div class="panel-body"> 
+                        <div class="form-horizontal">
+                            <div class="col-sm-4">
+                                <div class="form-group">
+                                    <label for="MainContent_text_reg_web" class="col-sm-4 control-label">RFC:</label>
+                                    <div class="col-sm-8">
+                                        <input name="rfc2" id="rfc2" type="text" placeholder="AAAA010203AAA">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="form-group">
+                                    <h6 for="MainContent_text_reg_cp" class="col-sm-4 control-label">Nombre:</h6>
+                                        <div class="col-sm-8">
+                                            <input name="nombreEmp" id="nombreEmp" type="text" placeholder="Nombre del empleado">
+                                        </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="form-group">
+                                    <h6 for="MainContent_text_reg_cp" class="col-sm-4 control-label">No. empleado:</h6>
+                                        <div class="col-sm-8">
+                                            <input name="noEmpleado" id="noEmpleado" type="text" placeholder="Número del empleado">
+                                        </div>
+                                      </div>
+                            </div>
+                        </div>  
+                   </div>
+               </div>
+
+
+
+               <div class="panel panel-primary">
+                 <div class="panel-heading">Catálogo de empleados 1.2</div>
+                    <div class="panel-body"> 
+                        <button type="button" class="btn btn-success">Agregar empleado</button> <p>
+                        <div class="table">
+                            <table id="tabla2" border="1" class="table table-resposive">
+                                <thead class="thead-dark">
+                                    <tr>
+                                        <th scope="col">Activo</th>
+                                        <th scope="col">RFC</th>
+                                        <th scope="col">Nombre</th>
+                                        <th scope="col">No. de empleado</th>
+                                        <th scope="col">edit</th>
+                                        <th scope="col">delete</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th>1</th>
+                                        <td>CANA860507RI8</td>
+                                        <td>ANA GISELA CASTILLO NAVA</td>
+                                        <td>5</td>
+                                        <td><i class="fas fa-pencil-alt" style="font-size: 15px;"></i></td>
+                                        <td><i class="fas fa-trash-alt" style="font-size: 15px;"></i></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+
+
+                        <div class="form-horizontal">
+                            <div class="col-sm-8">
+                                <div class="form-group">
+                                    <label>Pagina 1 de 1, 6 registros</label>
+                                </div>
+                            </div>
+                            <div class="col-sm-4 right">
+                              <div class="form-group">
+                                    <button class="btn btn-default btn-circle"><i class="glyphicon glyphicon-backward"></i></button>
+                                    <button class="btn btn-default btn-circle"><i class="glyphicon glyphicon-triangle-left"></i></button>
+                                    <button class="btn btn-default btn-circle"><i class="glyphicon glyphicon-triangle-right"></i></button>
+                                    <button class="btn btn-default btn-circle"><i class="glyphicon glyphicon-forward"></i></button> <p></p>
+
+                                    <button type="button" class="btn btn-success">Exportar empleados</button> <p>
+                              </div>
+                            </div>
+                        </div>
+                       
+                        
+                    </div>
+               </div>
+      
 </div>

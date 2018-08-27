@@ -5,3 +5,28 @@
 .btn-success{
     margin-left: 3px;
 }
+
+.btn-circle, .btn-circle-3d{
+    border-radius: 50%;
+    background-color: #D0CACA;
+    margin-left: 4px;
+}
+
+.btn-default.btn-circle{
+    -webkit-box-shadow: 0px 0px 3px 1px #ccc; 
+}
+
+.right {
+    text-align: right;
+}
+
+.r{color: blue;}
+
+.col-lg-5{
+    position: relative;
+    left: 2em;
+}
+
+font{
+    text-align: left;
+}
