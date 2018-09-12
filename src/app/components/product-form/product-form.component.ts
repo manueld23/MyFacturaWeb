@@ -45,8 +45,13 @@ export class ProductFormComponent implements OnInit {
   getProductos(){
     this.productoService.getProductos()
     .subscribe(res => {
-      this.productoService.producto = res as Producto[];
+      this.productoService.productos = res as Producto[];
     });
+  }
+
+  editProducto(producto: Producto){
+    this.productoService.selectedProducto = producto;
+    console.log(producto);
   }
 
   deleteProducto(idNueProducto: number, form: NgForm){

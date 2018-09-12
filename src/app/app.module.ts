@@ -8,12 +8,18 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ProductFormComponent } from './components/product-form/product-form.component';
 import { EmpleadoComponent } from './components/empleado/empleado.component';
+import { LoginComponent } from './components/login/login.component';
+import { PrincipalComponent } from './components/principal/principal.component';
+import { GCFDI33Component } from './g-cfdi33/g-cfdi33.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ProductFormComponent,
-    EmpleadoComponent
+    EmpleadoComponent,
+    LoginComponent,
+    PrincipalComponent,
+    GCFDI33Component
   ],
   imports: [
     FormsModule,

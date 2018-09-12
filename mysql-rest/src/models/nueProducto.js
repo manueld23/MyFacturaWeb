@@ -12,7 +12,7 @@ let productModel = {};
 productModel.getProducts = (callback) => {
     if (connection){
         connection.query(
-            'SELECT * FROM nProducto ORDER BY idNueProducto',
+            ' SELECT * FROM nProducto ORDER BY idNueProducto',
             (err, rows) => {
                 if (err){
                     throw err;
@@ -71,14 +71,14 @@ productModel.updateProduct = (productData, callback) => {
     if (connection){
         const sql = `
         UPDATE nProducto SET
-        desProducto = ${connection.escape(productData.desProducto)},
-        servicio = ${connection.escape(productData.servicio)},
-        descripcion = ${connection.escape(productData.descripcion)},
-        noIdentificacionP = ${connection.escape(productData.noIdentificacionP)},
-        desUnidad = ${connection.escape(productData.desUnidad)},
-        dClavUnidad = ${connection.escape(productData.dClavUnidad)},
-        valUnitario = ${connection.escape(productData.valUnitario)},
-        unidad = ${connection.escape(productData.unidad)}
+        desProducto         = ${connection.escape(productData.desProducto)},
+        servicio            = ${connection.escape(productData.servicio)},
+        descripcion         = ${connection.escape(productData.descripcion)},
+        noIdentificacionP   = ${connection.escape(productData.noIdentificacionP)},
+        desUnidad           = ${connection.escape(productData.desUnidad)},
+        dClavUnidad         = ${connection.escape(productData.dClavUnidad)},
+        valUnitario         = ${connection.escape(productData.valUnitario)},
+        unidad              = ${connection.escape(productData.unidad)}
         WHERE idNueProducto = ${connection.escape(productData.idNueProducto)}
         `
 

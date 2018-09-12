@@ -1,67 +1,36 @@
-/*.btn-secondary{
-    margin-left: 3px;
-}
-
-.btn-success{
-    margin-left: 3px;
-}
-
-.btn-circle, .btn-circle-3d{
-    border-radius: 50%;
-    background-color: #D0CACA;
-    margin-left: 4px;
-}
-
-.btn-default.btn-circle{
-    -webkit-box-shadow: 0px 0px 3px 1px #ccc; 
-}
-
-.right {
-    text-align: right;
-}
-
-.r{color: blue;}
-
-.col-lg-5{
-    position: relative;
-    left: 2em;
-}
-
-font{
-    text-align: left;
-} */
 .btn-secondary{
-    margin-left: 3px;
+  margin-left: 3px;
 }
 
 .btn-success{
-    margin-left: 3px;
+  margin-left: 3px;
 }
 
 .btn-circle, .btn-circle-3d{
-    border-radius: 50%;
-    background-color: #D0CACA;
-    margin-left: 4px;
+  border-radius: 50%;
+  background-color: #D0CACA;
+  margin-left: 4px;
 }
 
 .btn-default.btn-circle{
-    -webkit-box-shadow: 0px 0px 3px 1px #ccc; 
+  -webkit-box-shadow: 0px 0px 3px 1px #ccc; 
 }
 
 .right {
-    text-align: right;
+  text-align: right;
 }
 
 .r{color: blue;}
 
 .col-lg-5{
-    position: relative;
-    left: 2em;
+  position: relative;
+  left: 2em;
 }
 
 font{
-    text-align: left;
-}
+  text-align: left;
+} 
+
 
 #a{     
 padding: 0;
@@ -85,10 +54,10 @@ height: 65px;
 }
 
 #button li a:hover {
- background-color: #2586d7;
- margin-top: -2;
- padding-bottom: 12px;
- }
+background-color: #2586d7;
+margin-top: -2;
+padding-bottom: 12px;
+}
 
 /* New Product*/
 h5{
@@ -102,59 +71,60 @@ color:#ffffff;
 
 /* Table */
 .rwd-table {
-  margin: 1em 0;
-  min-width: 288px;
+margin: 1em 0;
+min-width: 250px;
+
 }
 .rwd-table th {
-  display: none;
-  width: 10%;
+display: none;
+width: 10%;
 }
 .rwd-table td {
-  display: block;
+display: block;
 }
 .rwd-table td:before {
-  content: attr(data-th) ": ";
-  font-weight: bold;
-  width: 6.5em;
-  display: inline-block;
+content: attr(data-th) ": ";
+font-weight: bold;
+width: 6.5em;
+display: inline-block;
 }
 @media (min-width: 480px) {
-  .rwd-table td:before {
-    display: none;
-  }
+.rwd-table td:before {
+  display: none;
+}
 }
 .rwd-table th, .rwd-table td {
-  text-align: center;
+text-align: center;
 }
 @media (min-width: 480px) {
-  .rwd-table th, .rwd-table td {
-    display: table-cell;
-  }
+.rwd-table th, .rwd-table td {
+  display: table-cell;
+}
 }
 
 body {
-  font-family: Montserrat, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  text-rendering: optimizeLegibility;
-  color: #444;
-  background: #eee;
+font-family: Montserrat, sans-serif;
+-webkit-font-smoothing: antialiased;
+text-rendering: optimizeLegibility;
+color: #444;
+background: #eee;
 }
 
 .rwd-table {
-  background:    #ffffff;
-  color:  #000000;
-  overflow: hidden;
+background:    #ffffff;
+color:  #000000;
+overflow: hidden;
 }
 
 .rwd-table tr {
-  border-color:  #000000;
+border-color:  #000000;
 border: 2px solid #3498DB;
 }
 
 .rwd-table th, .rwd-table td:before {
-  color:   #000000; 
-  font-family: calibri;
- 
+color:   #000000; 
+font-family: calibri;
+
 }
 
 .rwd-table th{
@@ -162,100 +132,9 @@ background-color: #E5E8E8;
 }
 
 .rwd-table tr:nth-child(odd) {
-    background-color: #D6EAF8;
+  background-color: #D6EAF8;
 }
 
 .rwd-table tr:nth-child(even) {
-    background-color: #EDF4F9;
-}   
-
-
-/* Table 2 */
-.table {
-  margin: 1em 0;
-  min-width: 290px;
+  background-color: #EDF4F9;
 }
-.table th {
-  display: none;
-  width: 10%;
-}
-.table td {
-  display: block;
-}
-.table td:before {
-  content: attr(data-th) ": ";
-  font-weight: bold;
-  width: 6.5em;
-  display: inline-block;
-}
-@media (min-width: 480px) {
-  .table td:before {
-    display: none;
-  }
-}
-.table th, .table td {
-  text-align: center;
-}
-@media (min-width: 480px) {
-  .table th, .table td {
-    display: table-cell;
-  }
-}
-
-body {
-  font-family: Montserrat, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  text-rendering: optimizeLegibility;
-  color: #444;
-  background: #eee;
-}
-
-.table {
-  background:    #ffffff;
-  color:  #000000;
-  overflow: hidden;
-}
-
-.table tr {
-  border-color:  #000000;
-border: 2px solid #3498DB;
-}
-
-.table th, .table td:before {
-  color:   #000000; 
-  font-family: calibri;
- 
-}
-
-.table th{
-background-color: #E5E8E8;
-}
-
-.table tr:nth-child(odd) {
-    background-color: #D6EAF8;
-}
-
-.table tr:nth-child(even) {
-    background-color: #EDF4F9;
-}   
-
-#c{
-margin: 0%;    
-font-size: 100%;
-text-align: right;
-}
-
-#btn1{
-float: right;
-
-}
-
-#btn2{
-float: right;;
-}
-
-#btn3{ 
-float: right;
- }
-
- 

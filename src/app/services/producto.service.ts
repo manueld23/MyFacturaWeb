@@ -9,7 +9,7 @@ import { ProductFormComponent } from '../components/product-form/product-form.co
 export class ProductoService {
 
   selectedProducto: Producto;
-  producto: Producto[];
+  productos: Producto[];
   readonly URL_API = 'http://localhost:3000/producto';
 
   constructor(private http: HttpClient) { 

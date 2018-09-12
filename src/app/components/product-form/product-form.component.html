@@ -54,7 +54,7 @@
                                 <label for="MainContent_text_reg_web" class="col-sm-4 control-label">*No. identificacion:</label>
                                 <div class="col-sm-8">
                                     <input name="noIdentificacionP" #name="ngModel" [(ngModel)]="productoService.selectedProducto.noIdentificacionP" 
-                                    class="form-control" type="text" placeholder="No. identificacion">
+                                    class="form-control" type="text" placeholder="No. identificación">
                                 </div>
                             </div>
                         </div>
@@ -83,7 +83,8 @@
                             <div class="form-group">
                                 <label for="MainContent_text_reg_cp" class="col-sm-4 control-label">Unidad</label>
                                 <div class="col-sm-8">
-                                    <input name="unidad" #name="ngModel" [(ngModel)]="productoService.selectedProducto.unidad" class="form-control" type="text" placeholder="Unidad">
+                                    <input name="unidad" #name="ngModel" [(ngModel)]="productoService.selectedProducto.unidad" 
+                                    class="form-control" type="text" placeholder="Unidad">
                                 </div>
                             </div>
                         </div>
@@ -102,47 +103,201 @@
       </div>
 
 
-     <div class="table table-resposive">
-       <table id="tabla1" border="1" class="rwd-table">
-           <tr>
-             <th>Clave, servicio o prod</th>
-             <th >No. identificacion</th>
-             <th >Clave unidad</th>
-             <th >Unidad</th>
-             <th >Descripcion</th>
-             <th >Valor unitario</th>
-             <th scope="col">Tiempo</th>
-             <th scope="col">Editar</th>
-             <th scope="col">Eliminar</th>
-           </tr>
+      <div class="rwd-table">
+            <table id="tabla1" border="1" class="table table-resposive">
+                <thead>
+                  <th data-th="Clave, servicio o prod">Clave, servicio o prod</th>
+                  <th>No. identificacion</th>
+                  <th>Clave unidad</th>
+                  <th>Unidad</th>
+                  <th>Descripcion</th>
+                  <th>Valor unitario</th>
+                  <th>T/E/E</th>
+                </thead>
+                <tbody>
+                 <tr *ngFor="let producto of productoService.productos">
+                  <td data-th="servicio">{{ producto.servicio }}</td>
+                  <td data-th="No. indetificacion">{{ producto.noIdentificacionP }}</td>
+                  <td data-th="dClavUnidad">{{ producto.dClavUnidad }}</td>
+                  <td data-th="Unidad">{{ producto.unidad }}</td>
+                  <td data-th="Descripcion">{{ producto.descripcion }}</td>
+                  <td data-th="Valor unitario">{{ producto.valUnitario }}</td>
+                  <td data-th="T/E/E">
+                    <a>
+                      <i class="far fa-clock" style="font-size: 15px;"></i>  
+                    </a>
+                    <a (click)="updateProduct" data-toggle="modal" data-target=".updateProduct">  
+                      <i class="fas fa-pencil-alt" style="font-size: 15px;"></i> 
+                    </a>
+                    <a (click)="deleteProducto(producto.idNueProducto)">
+                      <i class="fas fa-trash-alt" style="font-size: 15px;"></i>
+                    </a>  
+                  </td>
+                 </tr>
+                </tbody> <p></p>
+                
+                <i data-toggle="modal" data-target=".updateProduct"></i> 
+                 <div class="modal fade updateProduct" tabindex="-1" role="dialog" aria-labelledby="updateProductLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+              <div class="modal-header">
 
-           <tr>
-             <td data-th="Clave, servicio o prod">11101716</td>
-             <td data-th="No. indetificacion">1.00</td>
-             <td data-th="Clave unidad">MTR</td>
-             <td data-th="Unidad">METRO</td>
-             <td data-th="Descripcion">SOLDADURA OMEGA 1.00</td>
-             <td data-th="Valor unitario">$6.00000</td>
-             <td data-th="Tiempo"><i class="far fa-clock" style="font-size: 15px;"></i></td>
-             <td data-th="Editar"><i class="fas fa-pencil-alt" style="font-size: 15px;"></i></td>
-             <td data-th="Eliminar"><i class="fas fa-trash-alt" style="font-size: 15px;"></i></td>
-           </tr>
+                  <h5 class="modal-title" id="updateProduct">Nuevo producto</h5>
+              </div>
+            
+            <div class="modal-body">
+                <form class="form-inline col-lg-12 " role="form-horizontal">
+                 <input type="hidden" name="idNueProducto" #_idNueProducto="ngModel" [(ngModel)]="productoService.selectedProducto.idNueProducto">
+                <div class="col-md-12 col-lg-12">
 
-           <tr>
-             <td data-th="Clave, servicio o prod">2260868</td>
-             <td data-th="No. indetificacion">2.00</td>
-             <td data-th="Clave unidad">MTR0</td>
-             <td data-th="Unidad">Envoltura</td>
-             <td data-th="Descripcion">SOLDADURA OMEGA 2.00</td>
-             <td data-th="Valor unitario">$10.00000</td>
-             <td data-th="Tiempo"><i class="far fa-clock" style="font-size: 15px;"></i></td>
-             <td data-th="Editar"><i class="fas fa-pencil-alt" style="font-size: 15px;"></i></td>
-             <td data.th="Eliminar"><i class="fas fa-trash-alt" style="font-size: 15px;"></i></td>
-           </tr>
-         </tbody>
-       </table>
+                  <div class="row">
+
+                     <div class="col-lg-6 form-group">       
+                         <div class="col-lg-5">
+                             <font size="2">Descripción de producto o</font>
+                         </div>
+                         <div class="col-lg-7">
+                             <input name="desProducto" #name="ngModel" [(ngModel)]="productoService.selectedProducto.desProducto"
+                             type="text" class="form-control" placeholder="Buscar producto ó servicio">
+                         </div>                    
+                     </div>
+
+                     <div class="col-lg-6 form-group">   
+                         <div class="col-lg-5">
+                             <font size="2">Descripcion unidad:</font>    
+                         </div>
+                         <div class="col-lg-7">
+                             <input name="desUnidad" #name="ngModel" [(ngModel)]="productoService.selectedProducto.desUnidad"
+                              type="text" class="form-control" placeholder="Buscar unidad">
+                         </div>    
+                     </div>
+
+                  </div>
+
+
+                  <div class="row">
+
+                     <div class="col-lg-6 form-group">
+                         <div class="col-lg-5">
+                             <font size="2">Servicio:</font>
+                         </div>
+                         <div class="col-lg-7">
+                             <input name="servicio" #name="ngModel" [(ngModel)]="productoService.selectedProducto.servicio"
+                              type="text" class="form-control" placeholder="Descripcion sobre la clave del producto">
+                         </div>    
+                     </div>
+
+                     <div class="col-lg-6 form-group">
+                         <div class="col-lg-5">
+                             <font size="2"></font>   
+                         </div>
+                         <div class="col-lg-7">
+                             <input name="dClavUnidad" #name="ngModel" [(ngModel)]="productoService.selectedProducto.dClavUnidad"
+                              type="text" class="form-control" placeholder="Descripción sobre la clave de la unidad">
+                         </div>     
+                     </div>
+
+                  </div>
+
+
+                  <div class="row" >
+
+                     <div class="col-lg-6 form-group">
+                         <div class="col-lg-5">
+                             <font size="2">*Descripción:</font>
+                         </div>
+                         <div class="col-lg-7">
+                             <input name="descripcion" #name="ngModel" [(ngModel)]="productoService.selectedProducto.descripcion"
+                              type="text" class="form-control" placeholder="Descripción">
+                         </div>
+                     </div>
+
+                     <div class="col-lg-6 form-group">
+                         <div class="col-lg-5">
+                             <font size="2">*Valor unitario:</font>   
+                         </div>
+                         <div class="col-lg-7">
+                             <input name="valUnitario" #name="ngModel" [(ngModel)]="productoService.selectedProducto.valUnitario"
+                              type="text" class="form-control" placeholder="0">
+                         </div>
+                     </div>
+
+                  </div>
+
+
+                  <div class="row">
+ 
+                     <div class="col-lg-6 form-group">
+                         <div class="col-lg-5">
+                             <font size="2">*No identificacion:</font>
+                         </div>
+                         <div class="col-lg-7">
+                             <input name="noIdentificacionP" #name="ngModel" [(ngModel)]="productoService.selectedProducto.noIdentificacionP"
+                              type="text" class="form-control" placeholder="0">
+                         </div>
+                     </div>
+
+                     <div class="col-lg-6 form-group">
+                         <div class="col-lg-5">
+                             <font size="1">Unidad</font>   
+                         </div>
+                         <div class="col-lg-7">
+                             <input name="unidad" #name="ngModel" [(ngModel)]="productoService.selectedProducto.unidad"
+                              type="text" class="form-control" placeholder="Unidad">
+                         </div>
+                     </div>
+
+                  </div>
+                  <div class="modal-footer">  
+                    <button type="button" class="btn btn-success" (click)="addProducto(productoForm)">Actualizar</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                  </div>
+
+
+                </div>
+             </form>
+            </div> 
+        </div>
+      </div>
+      </div>
+
+            </table>
      </div>
+
+    <form class="form-inline col-lg-12 " role="form-horizontal">
+        <div class="col-md-12 col-lg-12"> 
+            <div class="row">
+                <!--<div class="form-group">-->       
+                    <div class="col-sm-5 left"> 
+                        <span>Pagina 1 de 384, 7664 registros</span>       
+                    </div>
+                    <div class="col-sm-7 right">
+                        <button class="btn btn-default btn-circle"><i class="glyphicon glyphicon-backward"></i></button>
+                        <button class="btn btn-default btn-circle"><i class="glyphicon glyphicon-triangle-left"></i></button>
+                        <button class="btn btn-default btn-circle"><i class="glyphicon glyphicon-triangle-right"></i></button>
+                        <button class="btn btn-default btn-circle"><i class="glyphicon glyphicon-forward"></i></button> <p></p>
+                
+                        <button type="button" class="btn btn-success">Exportar productos</button> <p>
+                    </div>                    
+                <!--</div>-->
+            </div>
+        </div>    
+    </form>
+
 </div>
 </div>
+
+
+     <div class="panel panel-primary">
+        <div class="panel-heading">Administración de productos</div>
+            <div class="panel-body">
+                <div class="checkbox">
+                    <label><input type="checkbox" value="">Importar productos</label>
+                </div>
+                <div class="checkbox">
+                    <label><input type="checkbox" value="">Eliminar catálogo de productos</label>
+                </div>
+            </div>
+     </div>
       
 </div> 
