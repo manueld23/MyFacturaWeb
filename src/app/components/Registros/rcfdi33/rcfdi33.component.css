@@ -1,0 +1,19 @@
+#panels{
+	background-color: #336666;
+}
+
+.b{
+	 padding: 3px 10px;
+  border: #006666 solid;
+  border-radius: 20px;
+    	
+}
+
+#NSER{
+	padding: 2em;
+	color: #FBFCFC; 
+	width: 90em;
+}
+#NSER th{
+	text-align: center;
+}

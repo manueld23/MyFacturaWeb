@@ -1,10 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 
-import { EmisorService } from '../../services/emisor.service';
-import { EmpleadoService } from '../../services/empleado.service';
 import { NgForm } from '@angular/forms';
-import { Emisor } from '../../models/emisor';
-import { Empleado } from '../../models/empleado';
+import { EmisorService }   from '../../../services/emisor.service';
+import { EmpleadoService } from '../../../services/empleado.service';
+import { Emisor }          from '../../../models/emisor';
+import { Empleado }        from '../../../models/empleado';
 
 @Component({
   selector: 'app-empleado',

@@ -777,59 +777,68 @@
 
 
                <div class="panel panel-primary">
-                 <div class="panel-heading">Catálogo de empleados 1.2</div>
-                    <div class="panel-body"> 
-                        <button type="button" class="btn btn-success">Agregar empleado</button> <p>
-                                <div class="table">
-                                        <table id="tabla2" border="1" class="table table-resposive">
-                                            
-                                                <tr>
-                                                    <th>Activo</th>
-                                                    <th>RFC</th>
-                                                    <th>Nombre</th>
-                                                    <th>No. de empleado</th>
-                                                    <th>Edit/Delete</th>
-                                                </tr>
-                                      
-                                                <tr>
-                                                    <td data-th="Activo">1</td>
-                                                    <td data-th="RFC">CANA860507RI8</td>
-                                                    <td data-th="Nombre">NA GISELA CASTILLO NAVA</td>
-                                                    <td data-th="No. De empleado">5</td>
-                                                    <td data-th="Edit/Delete"><i class="fas fa-pencil-alt" style="font-size: 15px;"></i> <i class="fas fa-trash-alt" style="font-size: 15px;"></i></td>
-                                                </tr>
-                    
-                                                <tr>
-                                                    <td data-th="Activo">1</td>
-                                                    <td data-th="RFC">CANA860507RI8</td>
-                                                    <td data-th="Nombre">NA GISELA CASTILLO NAVA</td>
-                                                    <td data-th="No. De empleado">5</td>
-                                                    <td data-th="Edit/Delete"><i class="fas fa-pencil-alt" style="font-size: 15px;"></i> <i class="fas fa-trash-alt" style="font-size: 15px;"></i></td>
-                                                    
-                                                </tr>
-                                        </table>
-                                    </div>
-
-
-                        <div class="form-horizontal">
-                            <div class="col-sm-8">
-                                <div class="form-group">
-                                    <label>Pagina 1 de 1, 6 registros</label>
-                                </div>
-                            </div>
-                            <div class="col-sm-4 right">
-                              <div class="form-group">
-                                    <button class="btn btn-default btn-circle"><i class="glyphicon glyphicon-backward"></i></button>
-                                    <button class="btn btn-default btn-circle"><i class="glyphicon glyphicon-triangle-left"></i></button>
-                                    <button class="btn btn-default btn-circle"><i class="glyphicon glyphicon-triangle-right"></i></button>
-                                    <button class="btn btn-default btn-circle"><i class="glyphicon glyphicon-forward"></i></button> <p></p>
-
-                                    <button type="button" class="btn btn-success">Exportar empleados</button> <p>
-                              </div>
-                            </div>
-                        </div>
-                       
-                        
-                    </div>
-               </div>
+                    <div class="panel-heading" id="panels">Catálogo de empleados 1.2</div>
+                       <div class="panel-body"> 
+                           <button type="button" class="btn btn-success">Agregar empleado</button> <p>
+   
+   
+                           <div class="table table-resposive">
+                               <table id="tabla2" border="1" class="table">
+                               <thead>
+                                   
+                                       <tr>
+                                           <th scope="col">Activo</th>
+                                           <th scope="col">RFC</th>
+                                           <th scope="col">Nombre</th>
+                                           <th scope="col">No. de empleado</th>
+                                           <th scope="col">Edit/Delete</th>
+                                       </tr>
+                               </thead>  
+                                     
+                               <tbody>
+                                       <tr>
+                                           <td data-label="Activo">1</td>
+                                           <td data-label="RFC">CANA860507RI8</td>
+                                           <td data-label="Nombre">NA GISELA CASTILLO NAVA</td>
+                                           <td data-label="No. De empleado">5</td>
+                                           <td data-label="Edit/Delete"><i class="fas fa-pencil-alt" style="font-size: 15px;"></i> <i class="fas fa-trash-alt" style="font-size: 15px;"></i></td>
+                                       </tr>
+           
+                                       <tr>
+                                           <td scope="row" data-label="Activo">1</td>
+                                           <td data-label="RFC">CANA860507RI8</td>
+                                           <td data-label="Nombre">NA GISELA CASTILLO NAVA</td>
+                                           <td data-label="No. De empleado">5</td>
+                                           <td data-label="Edit/Delete"><i class="fas fa-pencil-alt" style="font-size: 15px;"></i> <i class="fas fa-trash-alt" style="font-size: 15px;"></i></td>
+                                           
+                                       </tr>
+                               </tbody>    
+                               </table>
+                           </div>
+   
+   
+   
+                           <div class="form-horizontal">
+                               <div class="col-sm-8">
+                                   <div class="form-group">
+                                       <label>Pagina 1 de 1, 6 registros</label>
+                                   </div>
+                               </div>
+                               <div class="col-sm-4 right">
+                                 <div class="form-group">
+                                       <button id="boton" class="btn btn-default btn-circle"><i class="glyphicon glyphicon-forward"></i></button>
+                                       <button id="boton" class="btn btn-default btn-circle"><i class="glyphicon glyphicon-triangle-right"></i></button>
+                                       <button id="boton" class="btn btn-default btn-circle"><i class="glyphicon glyphicon-triangle-left"></i></button>
+                                       <button id="boton" class="btn btn-default btn-circle"><i class="glyphicon glyphicon-backward" ></i></button>
+                                        <p></p>
+                                       <br>
+                                       <br>
+                                       <button id="boton" type="button" class="btn btn-success">Exportar empleados</button> <p>
+                                 </div>
+                               </div>
+                           </div>
+                          
+                           
+                       </div>
+                  </div>
 </div>

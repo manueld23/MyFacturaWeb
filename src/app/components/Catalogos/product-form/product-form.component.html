@@ -103,26 +103,28 @@
       </div>
 
 
-      <div class="rwd-table">
-            <table id="tabla1" border="1" class="table table-resposive">
+      <div class="table table-resposive">
+            <table id="tabla1" border="1" class="rwd-table">
                 <thead>
-                  <th data-th="Clave, servicio o prod">Clave, servicio o prod</th>
-                  <th>No. identificacion</th>
-                  <th>Clave unidad</th>
-                  <th>Unidad</th>
-                  <th>Descripcion</th>
-                  <th>Valor unitario</th>
-                  <th>T/E/E</th>
+                 <tr>
+                  <th scope="col">Clave, servicio o prod</th>
+                  <th scope="col">No. identificacion</th>
+                  <th scope="col">Clave unidad</th>
+                  <th scope="col">Unidad</th>
+                  <th scope="col">Descripcion</th>
+                  <th scope="col">Valor unitario</th>
+                  <th scope="col">T/E/E</th>
+                 </tr>
                 </thead>
                 <tbody>
                  <tr *ngFor="let producto of productoService.productos">
-                  <td data-th="servicio">{{ producto.servicio }}</td>
-                  <td data-th="No. indetificacion">{{ producto.noIdentificacionP }}</td>
-                  <td data-th="dClavUnidad">{{ producto.dClavUnidad }}</td>
-                  <td data-th="Unidad">{{ producto.unidad }}</td>
-                  <td data-th="Descripcion">{{ producto.descripcion }}</td>
-                  <td data-th="Valor unitario">{{ producto.valUnitario }}</td>
-                  <td data-th="T/E/E">
+                  <td data-label="Clave, servicio o prod">{{ producto.servicio }}</td>
+                  <td data-label="No. indetificacion">{{ producto.noIdentificacionP }}</td>
+                  <td data-label="Clave unidad">{{ producto.dClavUnidad }}</td>
+                  <td data-label="Unidad">{{ producto.unidad }}</td>
+                  <td data-label="Descripcion">{{ producto.descripcion }}</td>
+                  <td data-label="Valor unitario">{{ producto.valUnitario }}</td>
+                  <td data-label="T, E, E">
                     <a>
                       <i class="far fa-clock" style="font-size: 15px;"></i>  
                     </a>
@@ -264,25 +266,25 @@
             </table>
      </div>
 
-    <form class="form-inline col-lg-12 " role="form-horizontal">
-        <div class="col-md-12 col-lg-12"> 
-            <div class="row">
-                <!--<div class="form-group">-->       
-                    <div class="col-sm-5 left"> 
-                        <span>Pagina 1 de 384, 7664 registros</span>       
-                    </div>
-                    <div class="col-sm-7 right">
-                        <button class="btn btn-default btn-circle"><i class="glyphicon glyphicon-backward"></i></button>
-                        <button class="btn btn-default btn-circle"><i class="glyphicon glyphicon-triangle-left"></i></button>
-                        <button class="btn btn-default btn-circle"><i class="glyphicon glyphicon-triangle-right"></i></button>
-                        <button class="btn btn-default btn-circle"><i class="glyphicon glyphicon-forward"></i></button> <p></p>
-                
-                        <button type="button" class="btn btn-success">Exportar productos</button> <p>
-                    </div>                    
-                <!--</div>-->
+    <div class="form-horizontal">
+        <div class="col-sm-8">
+            <div class="form-group">
+                <label>Pagina 1 de 384, 7664 registros</label>
             </div>
-        </div>    
-    </form>
+        </div>
+        <div class="col-sm-4 right">
+            <div class="form-group">
+                <button id="boton" class="btn btn-default btn-circle"><i class="glyphicon glyphicon-backward" ></i></button>
+                <button id="boton" class="btn btn-default btn-circle"><i class="glyphicon glyphicon-triangle-left"></i></button>
+                <button id="boton" class="btn btn-default btn-circle"><i class="glyphicon glyphicon-triangle-right"></i></button>
+                <button id="boton" class="btn btn-default btn-circle"><i class="glyphicon glyphicon-forward"></i></button>
+                <p></p>
+                <br>
+                <br>
+                <button id="boton" type="button" class="btn btn-success">Exportar producto</button> <p>
+            </div>
+        </div>
+    </div>
 
 </div>
 </div>
